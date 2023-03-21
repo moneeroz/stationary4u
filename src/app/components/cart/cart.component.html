@@ -1,41 +1,43 @@
-<div
-  *ngFor="let item of items"
-  class="card card-side bg-base-100 shadow-xl container mx-auto mb-3 max-w-sm"
->
-  <div class="w-10 rounded-full my-auto ml-5">
-    <figure><img [src]="'../../assets/productimgs/' + item.img" /></figure>
-  </div>
-  <div class="card-body">
-    <h4 class="card-title">
-      {{ item.name }} <span>{{ item.price | currency }}</span>
-    </h4>
-  </div>
-</div>
-
 <div>
-  <form
-    [formGroup]="checkoutForm"
-    (ngSubmit)="onSubmit()"
-    class="form-control container mx-auto max-w-xs"
+  <div
+    *ngFor="let item of items"
+    class="card card-side bg-base-100 shadow-xl container mx-auto mb-3 max-w-sm"
   >
-    <input
-      type="text"
-      placeholder="Name"
-      class="input input-bordered input-primary w-full max-w-xs mb-3"
-    />
+    <div class="w-10 rounded-full my-auto ml-5">
+      <figure><img [src]="'../../assets/productimgs/' + item.img" /></figure>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">
+        {{ item.name }} <span>{{ item.price | currency }}</span>
+      </h4>
+    </div>
+  </div>
 
-    <input
-      type="email"
-      placeholder="Email"
-      class="input input-bordered input-primary w-full max-w-xs mb-3"
-    />
+  <div>
+    <form
+      [formGroup]="checkoutForm"
+      (ngSubmit)="onSubmit()"
+      class="form-control container mx-auto max-w-xs"
+    >
+      <input
+        type="text"
+        placeholder="Name"
+        class="input input-bordered input-primary w-full max-w-xs mb-3"
+      />
 
-    <input
-      type="text"
-      placeholder="Address"
-      class="input input-bordered input-primary w-full max-w-xs mb-3"
-    />
+      <input
+        type="email"
+        placeholder="Email"
+        class="input input-bordered input-primary w-full max-w-xs mb-3"
+      />
 
-    <button class="btn btn-primary max-w-xs">Purchase</button>
-  </form>
+      <input
+        type="text"
+        placeholder="Address"
+        class="input input-bordered input-primary w-full max-w-xs mb-3"
+      />
+
+      <button class="btn btn-primary max-w-xs">Purchase</button>
+    </form>
+  </div>
 </div>

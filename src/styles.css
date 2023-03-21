@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --default-color: #fff;
+  --default-color: #eaf2f2;
   /* or any other variables/style */
 }
 [data-theme="dark"] {

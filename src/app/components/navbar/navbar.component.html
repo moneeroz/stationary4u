@@ -1,5 +1,6 @@
+<!-- Navbar -->
 <nav>
-  <div class="container mx-auto mb-3">
+  <div class="container mx-auto mb-10">
     <div class="navbar bg-base-100 shadow">
       <div class="flex-1">
         <a routerLink="" class="btn btn-ghost normal-case text-xl"
@@ -7,6 +8,7 @@
         >
       </div>
 
+      <!-- cart -->
       <div class="flex-none">
         <div *ngIf="!hideCartButton" class="dropdown dropdown-end">
           <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -44,6 +46,7 @@
             </div>
           </div>
         </div>
+        <!-- Toggler -->
         <div>
           <input
             data-toggle-theme="cupcake,black"
