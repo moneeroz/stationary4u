@@ -1,17 +1,19 @@
-<div *ngFor="let product of products" class="container mx-auto">
-  <div class="card card-compact w-96 bg-base-100 shadow-xl">
-    <figure>
-      <img [src]="'../../assets/productimgs/' + product.img" alt="Shoes" />
-    </figure>
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <div *ngFor="let product of products" class="container mx-auto">
+    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+      <figure>
+        <img [src]="'../../assets/productimgs/' + product.img" />
+      </figure>
 
-    <div class="card-body">
-      <h2 class="card-title">{{ product.name }}</h2>
-      <div class="badge badge-primary">{{ product.price | currency }}</div>
+      <div class="card-body">
+        <h2 class="card-title">{{ product.name }}</h2>
+        <div class="badge badge-primary">{{ product.price | currency }}</div>
 
-      <div class="card-actions justify-end">
-        <button (click)="addToCart(product)" class="btn btn-primary">
-          Add to Cart
-        </button>
+        <div class="card-actions justify-end">
+          <button (click)="addToCart(product)" class="btn btn-primary">
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   </div>

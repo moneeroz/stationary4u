@@ -4,13 +4,12 @@ import { products } from './../../config/products';
 import { Iproduct } from '../interfaces/iproduct';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
-
   items: Iproduct[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   addToCart(product: Iproduct) {
     this.items.push(product);
@@ -21,7 +20,8 @@ export class CartService {
   }
 
   clearCart() {
-    this.items =[];
-    return this.items
+    this.items = [];
+    window.alert('order processed successfully!');
+    return this.items;
   }
 }
