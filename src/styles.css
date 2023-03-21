@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --default-color: #fff;
+  /* or any other variables/style */
+}
+[data-theme="dark"] {
+  --default-color: #000;
+}
+[data-theme="black"] {
+  --default-color: #080808;
+}
+
+body {
+  background-color: var(--default-color);
+}
